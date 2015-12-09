@@ -6,6 +6,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('pois', function() {
+    this.route('poi', { path: '/:id'});
+  });
+  this.route('login');
 });
 
 export default Router;
