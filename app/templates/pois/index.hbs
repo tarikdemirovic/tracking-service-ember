@@ -1,4 +1,5 @@
-{{google-map zoom=zoom
-             type='road'
-             markers=model
-             autoFitBounds=true}}
+{{#g-map shouldFit=true as |context|}}
+	{{#each poi in model}}
+		{{g-map-marker context lat=poi.lat lng=poi.lng}}
+	{{/each}}
+{{/g-map}}

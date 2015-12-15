@@ -1,16 +1,18 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
-	/*centerLat: function() {
+export default Ember.ObjectController.extend({
+	centerLat: function() {
 		var model = this.get('model');
-		return model[0].lat;
-	}.property(),
+		return model.get('firstObject').lat;
+	}.property('model'),
 
 	centerLng: function() {
 		var model = this.get('model');
-		return model[0].lng;
-	}.property()*/
+		console.log(model.get('firstObject').lng);
+		return model.get('firstObject').lng;
+	}.property('model'),
 
-	centerLat: Ember.computed.oneWay('model.firstObject.lat'),
-  	centerLng: Ember.computed.oneWay('model.firstObject.lng')
+	zoom: function() {
+		return 16;
+	}.property('model')
 });

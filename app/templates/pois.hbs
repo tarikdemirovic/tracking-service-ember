@@ -3,10 +3,10 @@
 
              <ul class="poi-list">
             
-                  <li class="list-head">
+                  {{#link-to 'pois' tagName='li' class='list-head'}}
                         <img class="item-icon" src="https://cdn1.iconfinder.com/data/icons/anchor/128/location.png" alt="location-icon">
-                        <div class="item-text">{{input id="search-poi" placeholder="Search..." value=searchTerm size=25}}</div>
-                  </li>
+                        <div class="item-text">Show All POIs</div>
+                  {{/link-to}}
             
             {{#each poi in model}}
             {{#link-to 'pois.poi' poi.id tagName='li' class='li-item'}}

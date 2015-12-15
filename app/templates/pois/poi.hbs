@@ -1,6 +1,5 @@
-{{google-map gopt_zoomControl=false
-			 lat=centerLat
-			 lng=centerLng
-             type='road'
-             markers=model
-             zoom=16}}
+{{#g-map lat=centerLat lng=centerLng zoom=16 as |context|}}
+	{{#each poi in model}}
+		{{g-map-marker context lat=poi.lat lng=poi.lng}}
+	{{/each}}
+{{/g-map}}
