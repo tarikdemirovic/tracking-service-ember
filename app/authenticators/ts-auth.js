@@ -37,6 +37,7 @@ export default Base.extend({
                         token: response.session_key
                     });
                 });
+                window.location.replace('/pois');
             }, function(xhr, status, error) {
                 var response = xhr.responseText;
                 Ember.run(function() {

@@ -6,13 +6,9 @@ export default Ember.Controller.extend({
 	actions: {
 		authenticate() {
 			var credentials = this.getProperties('username', 'password');
-			this.get('session').authenticate('authenticator:ts-auth', credentials).catch((reason) => {
-				this.set('errorMessage', reason.error);
-			});
+			this.get('session').authenticate('authenticator:ts-auth', credentials);
 
 			console.log(this.get('session').isAuthenticated);
-
-			this.transitionToRoute('pois');
 		}
 	}
 });
