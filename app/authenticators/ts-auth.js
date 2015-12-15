@@ -18,7 +18,7 @@ export default Base.extend({
             Ember.$.ajax({
                 url: this.tokenEndpoint,
                 crossDomain: true,
-                async: false,
+                async: true,
 				xhrFields: {
 				  withCredentials: true
 				},
