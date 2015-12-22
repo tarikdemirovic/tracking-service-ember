@@ -11,7 +11,7 @@
             {{#each poi in model}}
             {{#link-to 'pois.poi' poi.id tagName='li' class='li-item'}}
                         <img class="item-icon" src="https://cdn1.iconfinder.com/data/icons/anchor/128/location.png" alt="location-icon">
-                        <div class="item-text">{{poi.title}}</div>
+                        <div class="item-text">{{poi.name}}</div>
             {{/link-to}}
             {{/each}}
              </ul>

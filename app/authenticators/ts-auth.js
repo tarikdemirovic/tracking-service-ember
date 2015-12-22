@@ -34,10 +34,10 @@ export default Base.extend({
                 console.log('authentication...');
                 Ember.run(function() {
                     resolve({
-                        token: response.session_key
+                        token: response.user.session_key
                     });
                 });
-                window.location.replace('/pois');
+                window.location.replace('/');
             }, function(xhr, status, error) {
                 var response = xhr.responseText;
                 Ember.run(function() {

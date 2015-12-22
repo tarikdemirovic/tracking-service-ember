@@ -1,5 +1,3 @@
-{{#g-map lat=centerLat lng=centerLng zoom=16 as |context|}}
-	{{#each poi in model}}
-		{{g-map-marker context lat=poi.lat lng=poi.lng}}
-	{{/each}}
+{{#g-map shouldFit=true as |context|}}
+	{{g-map-marker context lat=model.lat lng=model.lng}}
 {{/g-map}}
