@@ -9,4 +9,5 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
 		//should get pois from service
 		//return this.store.findAll('poi');
 	}
-});
+  }
+);

@@ -13,6 +13,25 @@
 	display: none;
 }
 
+.track-btn {
+	padding: 5px;
+	z-index: 1;
+	position: absolute;
+	right: 20px;
+	top: 100px;
+	height: 50px;
+	width: 150px;
+	font: 16px Arial, Helvetica, sans-serif;
+	background-color: #ffffff;
+	box-shadow: 5px 5px 5px grey;
+	opacity: 0.85;
+	transition: opacity .5s ease-in-out;
+}
+
+.track-btn:hover {
+	opacity: 1;
+}
+
 .poi-list {
 	z-index: 1;
 	position: absolute;
@@ -43,11 +62,28 @@
 	background-color: #F0F0F0;
 }
 
+a {
+	cursor: pointer;
+}
+
 .list-head {
+	cursor: pointer;
 	padding: 5px;
 	background-color: #F0F0F0;
 	height: 50px;
 	width: 250px;
+}
+
+.li-item {
+	cursor: pointer;
+}
+
+.li-item:hover {
+	background-color: #F0F0F0;
+}
+
+.list-head:hover {
+
 }
 
 .item-icon {

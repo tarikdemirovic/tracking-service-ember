@@ -1,5 +1,21 @@
 {{#g-map shouldFit=true as |context|}}
 	{{#each poi in model}}
-		{{g-map-marker context lat=poi.lat lng=poi.lng}}
+		{{#g-map-marker context group="group" lat=poi.lat lng=poi.lng as |markerContext|}}
+			{{#g-map-infowindow markerContext}}
+      			<h3>{{poi.name}}</h3>
+      			<p>Description: {{poi.description}}</p>
+      			<ul>
+      				{{#if poi.state.motor_running}}
+	      				<li>Motor running</li>
+	      			{{/if}}
+	      			{{#if poi.state.windows_up}}
+	      				<li>Windows up</li>
+	      			{{/if}}
+	      			{{#if poi.state.car_locked}}
+	      				<li>Car locked</li>
+	      			{{/if}}
+      			</ul>
+    		{{/g-map-infowindow}}
+		{{/g-map-marker}}
 	{{/each}}
 {{/g-map}}
